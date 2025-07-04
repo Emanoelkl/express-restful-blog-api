@@ -16,3 +16,37 @@ Content-Type: application/json
   "email": "tester1@email.com",
   "password": "123321"
 }
+
+### 📌 Copy token and paste here: 📌
+@token = Bearer TOKEN_HERE
+
+### 3. Create a new blogPost (🔐 need token)
+POST http://localhost:5003/blogposts
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "title": "First BlogPost yeeey",
+  "content": "this blogPost will auto destroy in 1...2..."
+}
+
+### 4. Get all blogPosts
+GET http://localhost:5003/blogposts
+
+### 5. Get blogPost by ID (📌 need post ID)
+GET http://localhost:5003/blogposts/POST_ID
+
+### 6. Update blogPost (🔐 need token) (📌 need post ID)
+PUT http://localhost:5003/blogposts/POST_ID
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "title": "new title 100% updated",
+  "content": "this IS 100% update i guarantee"
+}
+
+### 7. Delete blogPost (🔐 need token) (📌 need post ID)
+DELETE http://localhost:5003/blogposts/POST_ID
+Authorization: {{token}}
+
