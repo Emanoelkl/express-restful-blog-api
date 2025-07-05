@@ -46,7 +46,7 @@ Use any random string to secure your token.
 ### Run server
 
 ```bash
-node server.js     # Starts the server with nodemon (development)
+node server.js
 ```
 
 ## 📚 API Endpoints
